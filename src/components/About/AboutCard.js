@@ -13,14 +13,14 @@ function AboutCard() {
             <br />
             I'm 3rd-year engineering student and full-stack web developer with a passion for building responsive and scalable web applications.
             <br />
-            Currently in the early stages of learning machine learning, actively building and expanding skills in this evolving field.
+           Currently I'm in the early stages of learning machine learning, actively building and expanding skills in this evolving field.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
           <li className="about-activity">
-              <ImPointRight /> "I'm always explore and learn about the latest technologies.
+              <ImPointRight /> I’m always exploring and learning the latest technologies.
             </li>
             <li className="about-activity">
               <ImPointRight /> Playing Games

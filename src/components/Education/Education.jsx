@@ -8,14 +8,16 @@ const Education = () => {
       degree: "10th",
       year: "2018",
       description: "I Completed My 10th from Rajiv Gandhi School. ",
-      Cgpa:"5.8"
+      Cgpa:"5.9"
+      // Percentage:"58%"
     },
     {
       institution: "Chhattisgarh madhyamik shiksha mandal (CGBSE)",
       degree: "12th",
       year: "2020",
       description: " I Completed My 12th From Rajiv Gandhi School.",
-      Cgpa:"9.3"
+     Cgpa:"9.3"
+      // Percentage:"93%"
     },
     {
       institution: "Shri Shankarachary instiute Of Professional Technology",
@@ -40,6 +42,7 @@ const Education = () => {
                 <Card.Text>
                   <strong>Year:</strong> {edu.year}
                 </Card.Text>
+                
                 <Card.Text>
                   <strong>CGPA:</strong> {edu.Cgpa}
                 </Card.Text>
