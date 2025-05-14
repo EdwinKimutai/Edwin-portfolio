@@ -1,29 +1,21 @@
-/* --------- */
-/*  Global Styles */
 html {
-  --section-background-color: #ffffff; /* White background */
-  --text-color: #000000; /* Black text */
-  --hover-color: #d3d3d3; /* Light gray for hover effects */
-  --important-text-color: #000000; /* Black for important text */
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(40, 40, 40, 0.9),
+    rgba(20, 20, 20, 0.9)
+  );
+
+  --image-gradient: linear-gradient(
+    to bottom left,
+    rgba(50, 50, 50, 0.8),
+    rgba(30, 30, 30, 0.8)
+  );
+
+  --imp-text-color: #ffffff; /* White for important text */
 }
-body {
-  background-color: var(--section-background-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-}
+
 .purple {
-  color: var(--important-text-color) !important;
-  font-weight: bold !important; /* Bold important text */
-}
-p {
-  color: var(--text-color);
-  font-size: 1.2em !important;
-  line-height: 1.6em !important;
-}
-h1 {
-  color: var(--text-color);
-  font-size: 1.9em !important;
-  font-weight: bold !important;
+  color: var(--imp-text-color) !important;
 }
 
 button:focus {
@@ -40,7 +32,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: var(--section-background-color);
+  background-color: #1a1a1a; /* Dark gray */
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -65,17 +57,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--section-background-color);
+  background: #1a1a1a; /* Dark gray */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--hover-color);
+  background: rgba(178, 121, 216, 0.959);
   border-radius: 12px;
 }
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #bfbfbf; /* Slightly darker gray for hover */
+  background: rgba(222, 130, 235, 0.911);
   border-radius: 12px;
 }
 
@@ -83,9 +76,10 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: var(--section-background-color) !important;
+  background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  backdrop-filter: blur(15px) !important;
 }
 
 .navbar {
@@ -93,7 +87,6 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
-  background-color: #ffffff !important; /* Set a static white background */
 }
 
 .navbar-toggler {
@@ -104,7 +97,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: var(--text-color) !important;
+  background-color: #be50f4 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -151,14 +144,14 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: white !important;
+    background-color: #181a27 !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
 .navbar-brand {
-  color: var(--text-color) !important;
+  color: rgb(250, 250, 250) !important;
 }
 
 .logo {
@@ -167,7 +160,7 @@ button:focus {
 }
 
 .navbar-nav .nav-link {
-  color: var(--text-color) !important;
+  color: white !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -271,19 +264,22 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  background-color: var(--section-background-color);
+  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
+
 .home-content {
   padding: 9rem 0 2rem !important;
-  color: var(--text-color);
+  color: whitesmoke;
   text-align: left;
 }
 
 .heading {
   font-size: 2.4em !important;
-  color: var(--text-color);
+  padding-left: 50px !important;
 }
 
 .heading-name {
@@ -297,8 +293,8 @@ button:focus {
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: var(--text-color) !important;
-  font-weight: bold !important;
+  color: #be6adf !important;
+  font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
@@ -335,7 +331,7 @@ button:focus {
 }
 
 .home-about-description {
-  color: var(--text-color) !important;
+  color: white !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -344,7 +340,6 @@ button:focus {
 .home-about-body {
   padding-top: 50px;
   font-size: 1.2em !important;
-  color: var(--text-color) !important;
   text-align: left;
 }
 
@@ -414,84 +409,53 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #333333; /* Dark background for distinction */
-  color: white; /* White text for contrast */
-  padding: 20px 0; /* Add vertical padding */
-  text-align: center;
+  background-color: rgb(10, 4, 22);
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 8px !important ;
+}
+.footer-copywright {
+  text-align: center !important;
 }
 
-.footer-heading {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #ffffff;
+.footer-body {
+  z-index: 1;
+  text-align: center !important;
 }
 
-.footer-icons,
-.contact-info {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-icons li,
-.contact-info li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center-align content */
-}
-
-.footer-icons li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.1em;
-}
-
-.footer-icons li a:hover {
-  color: #6c63ff; /* Add hover effect for links */
-}
-
-.footer-icon {
-  margin-right: 10px;
-  font-size: 1.2em;
-}
-
-.footer-copywright h3 {
-  margin-top: 10px;
-  font-size: 1em;
-}
-
-/* Responsive Design */
 @media (max-width: 767px) {
-  .footer {
-    text-align: center;
+  .footer-copywright {
+    text-align: center !important;
   }
 
-  .footer-icon li,
-  .contact-info li {
-    justify-content: flex-start; /* Align items to the left on smaller screens */
+  .footer-body {
+    text-align: center !important;
   }
+}
 
-  .footer-heading {
-    font-size: 1.1em;
-  }
+.footer h3 {
+  font-size: 1em;
+  color: white !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+.footer-icons {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 0 !important;
+}
 
-  .footer-copywright h3 {
-    font-size: 0.9em;
-  }
-  .footer-icon {
-    justify-content: "space-between" !important;
-  }
+.blockquote-footer {
+  color: #a588c0 !important;
 }
 /* --------- */
 /* Projects */
 /* --------- */
 .project-section {
-  position: relative;
+  position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-color: var(--section-background-color);
+  background-image: var(--section-background-color) !important;
 }
 
 .project-card {
@@ -503,9 +467,9 @@ button:focus {
 }
 
 .project-card-view {
-  background-color: var(--section-background-color) !important;
-  color: var(--text-color) !important;
-  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -514,7 +478,6 @@ button:focus {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
-  background-color: var(--hover-color) !important;
 }
 
 .blog-card {
@@ -576,7 +539,7 @@ button:focus {
   box-shadow: none !important;
 }
 .project-heading {
-  color: #6d20c5d7 !important;
+  color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -586,39 +549,14 @@ button:focus {
 /* About */
 /* --------- */
 
-.breadcrumb-container {
-  position: fixed; /* Fix the breadcrumb at the top */
-  top: 80px; /* Align it to the top of the viewport */
-  right: 0; /* Align it to the right */
-  width: auto; /* Adjust the width to fit the content */
-  background-color: transparent; /* Optional: Add a background color */
-  z-index: 1000; /* Ensure it stays above other elements */
-  padding: 10px 140px; /* Add some padding for spacing */
-  text-align: right; /* Align the breadcrumb items to the right */
-}
-.breadcrumb-item a {
-  color: #6c63ff; /* Purple links */
-  text-decoration: none; /* Remove underline */
-}
-
-.breadcrumb-item a:hover {
-  color: #4b47c8; /* Darker purple on hover */
-  text-decoration: underline; /* Optional: Add underline on hover */
-}
-.sticky-image {
-  position: sticky; /* Makes the element sticky */
-  top: 100px; /* Distance from the top of the viewport */
-  align-self: flex-start; /* Ensures proper alignment in the column */
-  z-index: 10; /* Ensures it stays above other elements */
-}
-
 .about-section {
-  position: relative;
-  padding-top: 80px !important;
+  position: relative !important;
+  padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-color: var(--section-background-color);
-  color: var(--text-color) !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
 }
+
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
@@ -635,8 +573,8 @@ button:focus {
 }
 
 @media (max-width: 767px) {
-  .breadcrumb-container {
-    display: none; /* Hide the breadcrumb on smaller screens */
+  .tech-icons {
+    margin: 10px !important;
   }
 }
 
@@ -660,7 +598,6 @@ button:focus {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
-  color: var(--text-color) !important;
 }
 
 @media (max-width: 767px) {
@@ -673,11 +610,11 @@ button:focus {
 /* --------- */
 
 .resume-section {
-  position: relative;
+  position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-color: var(--section-background-color);
-  color: var(--text-color) !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
 }
 
 .resume {

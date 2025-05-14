@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.transparent-border {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px; /* optional: smooth edges */
+  padding: 2px; /* optional: inner spacing */
+  display: inline-block; /* shrink to content */
+}

@@ -1,8 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
 body {
   margin: 0;
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+}
+
+.white-dropdown .dropdown-toggle::after {
+  border-top-color: #000000 !important; /* Black arrow for dropdown */
+}
+
+a {
+  color: #000000; /* Black links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d3d3d3; /* Gray hover effect for links */
+}
+
+button {
+  background-color: #ffffff; /* White button background */
+  color: #000000; /* Black button text */
+  border: 1px solid #d3d3d3; /* Gray border */
+}
+
+button:hover {
+  background-color: #d3d3d3; /* Gray hover effect */
+  color: #000000; /* Keep text black */
 }

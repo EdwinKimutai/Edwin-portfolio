@@ -5,13 +5,14 @@ import {
   SiPostman,
   SiVercel,
   SiNetlify,
-  SiCanva
+  SiCanva,
+  SiFigma,
+  SiAdobephotoshop,
 } from "react-icons/si";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
       </Col>
@@ -19,15 +20,14 @@ function Toolstack() {
         <SiPostman />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNetlify />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
+        <SiFigma />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiCanva />
       </Col>
-
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAdobephotoshop />
+      </Col>
     </Row>
   );
 }
